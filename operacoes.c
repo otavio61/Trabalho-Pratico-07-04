@@ -13,6 +13,8 @@
  * 
  * 
  */
+#include <stdio.h>
+#include <math.h>
 #include "operacoes.h"
 
 /**
