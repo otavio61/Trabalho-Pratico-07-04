@@ -13,8 +13,8 @@
  * 
  * 
  */
-#ifndef _OPERACOES_H
-#define _OPERACOES_H
+#ifndef OPERACOES_H
+#define OPERACOES_H
 
 void calculadora();
 void mediaSituacao();
