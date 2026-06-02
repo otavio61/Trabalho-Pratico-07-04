@@ -145,6 +145,25 @@ void somaZero(){
     printf("quantidade de numeros inseridos: %d\n", cont);
 }
 
+void maiorMenor(){
+    int numero, maior = -__INT_MAX__, menor = __INT_MAX__;
+
+    printf("Digite um numero inteiro ou 0 para sair: ");
+    scanf("%d", &numero);
+
+    while(numero != 0){
+        if(numero > maior) maior = numero;
+        if(numero < menor) menor = numero;
+
+        printf("Digite um numero inteiro ou 0 para sair: ");
+        scanf("%d", &numero);
+    }
+    
+
+    printf("\nMaior numero: %d", maior);
+    printf("\nMenor numero: %d\n", menor);
+}
+
 /**
  * Realiza a operação de fatorial de acordo com o numero escolhido
  */

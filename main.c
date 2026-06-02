@@ -23,7 +23,7 @@ int main(){
         printf("| 3 - Par, impar e sinal                             |\n");
         printf("| 4 - Tabuada                                        |\n");
         printf("| 5 - Soma ate 0                                     |\n");
-        printf("| 6 - Potencia                                       |\n");
+        printf("| 6 - Maior e menor                                  |\n");
         printf("| 7 - Fatorial                                       |\n");
         printf("| 8 - Fibonacci                                      |\n");
         printf("| 0 - Sair                                           |\n");
@@ -54,7 +54,7 @@ int main(){
             break;
 
             case 6:
-                potencia();
+                maiorMenor();
             break;
 
             case 7:

@@ -21,7 +21,7 @@ void mediaSituacao();
 void parImpar();
 void tabuada();
 void somaZero();
-void potencia();
+void maiorMenor();
 void fatorial();
 void fibonacci();
 
