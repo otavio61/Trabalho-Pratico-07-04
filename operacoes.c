@@ -216,3 +216,14 @@ void fibonacci(){
 
     printf("\nNumero da posicao %d: %d\n", op, n3);
 }
+
+/**
+ *   srand(time(NULL));
+
+  int x = rand() % 3 + 1;  // 0..9
+  printf("%d\n", x);
+ */
+void listaCompra(){
+    float precos[100];
+    char produtos[10][30];
+}
