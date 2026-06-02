@@ -186,15 +186,19 @@ void fatorial(){
 void fibonacci(){
     int n1 = 0, n2 = 1, n3, op;
 
-    printf("Escolha qual posicao: ");
-    scanf("%d", &op);
+    do{
+        printf("\nEscolha qual posicao: ");
+        scanf("%d", &op);
 
+        if(op < 1) printf("\nDigite uma posicao a partir do 1\n");
+    } while (op < 1);
+    
     if(op == 1){
         n3 = 0;
     }else if(op == 2){
         n3 = 1;
     }else{
-        for (int i = 1; i < op; i++){
+        for (int i = 0; i < op - 2; i++){
             n3 = n1 + n2;
 
             n1 = n2;
@@ -202,7 +206,5 @@ void fibonacci(){
         }
     }
 
-
-
-    printf("Numero da posicao %d: %d", op, n3);
+    printf("\nNumero da posicao %d: %d\n", op, n3);
 }
