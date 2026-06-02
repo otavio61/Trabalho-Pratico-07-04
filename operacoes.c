@@ -48,6 +48,10 @@ void calculadora(){
 
             resultado = n1 / n2;
         break;
+
+        case '^':
+            resultado = pow(n1, n2);
+        break;
     }
 
     printf("\n%.2f %c %.2f = %.2f\n", n1, operacao, n2, resultado);
@@ -139,21 +143,6 @@ void somaZero(){
 
     printf("\nSoma total dos numeros: %.2f\n", soma);
     printf("quantidade de numeros inseridos: %d\n", cont);
-}
-
-/**
- * Realiza uma operação de potência, utilizando a biblioteca Math nativa
- */
-void potencia(){
-    float base, expoente;
-    
-    printf("\nDigite o numero da base: ");
-    scanf("%f", &base);
-
-    printf("Digite o numero do expoente: ");
-    scanf("%f", &expoente);
-
-    printf("\n%.2f^%.2f = %.2f\n", base, expoente, pow(base, expoente));
 }
 
 /**
