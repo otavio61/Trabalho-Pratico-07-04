@@ -25,5 +25,6 @@ void maiorMenor();
 void fatorial();
 void fibonacci();
 void listaCompra();
+void pausa();
 
 #endif
