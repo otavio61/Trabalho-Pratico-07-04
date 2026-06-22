@@ -44,6 +44,7 @@ void calculadora(){
         case '/':
             if(n2 == 0){
                 printf("\nNao eh possivel dividir por 0!\n");
+                pausa();
                 return;
             }
 
@@ -56,6 +57,8 @@ void calculadora(){
     }
 
     printf("\n%.2f %c %.2f = %.2f\n", n1, operacao, n2, resultado);
+
+    pausa();
 }
 
 /**
@@ -70,6 +73,7 @@ void mediaSituacao(){
 
     if((n1 < 0 || n1 > 10) || (n2 < 0 || n2 > 10)){
         printf("\n|-----|Insira notas entre 0 e 10|-----|\n");
+        pausa();
         return;
     }
 
@@ -84,6 +88,8 @@ void mediaSituacao(){
     }else{
         printf("Situacao: Reprovado!\n");
     }
+
+    pausa();
 }
 
 /**
@@ -105,6 +111,8 @@ void parImpar(){
     }else{
         printf("O numero eh ZERO\n");
     }
+
+    pausa();
 }
 
 /**
@@ -121,6 +129,8 @@ void tabuada(){
     for(int i = 0; i <= 10; i++){
         printf("%8d * %d = %d\n", numTabuada, i, numTabuada * i);
     }
+
+    pausa();
 }
 
 /**
@@ -144,6 +154,8 @@ void somaZero(){
 
     printf("\nSoma total dos numeros: %.2f\n", soma);
     printf("quantidade de numeros inseridos: %d\n", cont);
+
+    pausa();
 }
 
 void maiorMenor(){
@@ -163,6 +175,8 @@ void maiorMenor(){
 
     printf("\nMaior numero: %d", maior);
     printf("\nMenor numero: %d\n", menor);
+
+    pausa();
 }
 
 /**
@@ -190,6 +204,8 @@ void fatorial(){
     }
 
     printf("\n%d! = %d\n", num, acumulador);
+
+    pausa();
 }
 
 void fibonacci(){
@@ -216,6 +232,8 @@ void fibonacci(){
     }
 
     printf("\nNumero da posicao %d: %d\n", op, n3);
+
+    pausa();
 }
 
 void listaCompra(){
@@ -250,7 +268,7 @@ void listaCompra(){
     do {
         
         for(int i = 0; i < 10; i++){
-            printf("%d - %s\n", i+1, produtos[i]);
+            printf("%d - %s R$ %.2f\n", i+1, produtos[i], precos[i]);
         }
         printf("0 - Sair\n: ");
         scanf("%d", &produtoEscolhido);
@@ -324,4 +342,15 @@ void listaCompra(){
     } else{
         printf("O valor total da sua compra foi: R$ %.2f", totalDaCompra);
     }
+
+    pausa();
+}
+
+/**
+ * Feito para pausar a execução do código após o uso de alguma funcionalidade
+ */
+void pausa(){
+    getchar();
+    printf("\n\nDigite ENTER para continuar...");
+    getchar();
 }
