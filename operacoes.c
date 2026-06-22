@@ -15,6 +15,7 @@
  */
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "operacoes.h"
 
 /**
@@ -217,13 +218,110 @@ void fibonacci(){
     printf("\nNumero da posicao %d: %d\n", op, n3);
 }
 
-/** IDEIA SERA IMPLEMENTADA DEPOIS
- *   srand(time(NULL));
+void listaCompra(){
+    int produtoEscolhido, qtdComprada;
+    float desconto = 0, totalDaCompra = 0, precos[100] = {
+        25.90, //Arroz 
+        7.80, //Feijao
+        6.40, //Batata
+        8.60, //Refirgerante
+        2.00, //Bolacha
+        4.80, //Leite
+        27.40, //Sabao
+        2.60, //Detergente
+        2.00, //Esponja
+        19.30 //Amaciente
+    };
+    char produtos[10][30] = {
+        "Saco de arroz (5kg)",
+        "Saco de feijao (1kg)",
+        "Batata (1kg)",
+        "Refrigerante (2L)",
+        "Bolacha (200g)",
+        "Leite (1L)",
+        "Sabao em po (2,2kg)",
+        "Detergente (500ml)",
+        "Esponja de cozinha",
+        "Amaciante (1L)"
+    };
 
-  int x = rand() % 3 + 1;  // 0..9
-  printf("%d\n", x);
- */
-// void listaCompra(){
-//     float precos[100];
-//     char produtos[10][30];
-// }
+    printf("Bem-Vindo ao Mercado Virtual, escolha quais produtos voce deseja comprar, digitando o numero que vem antes dele\n\n");
+    
+    do {
+        
+        for(int i = 0; i < 10; i++){
+            printf("%d - %s\n", i+1, produtos[i]);
+        }
+        printf("0 - Sair\n: ");
+        scanf("%d", &produtoEscolhido);
+
+        switch (produtoEscolhido){
+            case 1:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[0] * qtdComprada;
+                break;
+            case 2:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[1] * qtdComprada;
+                break;
+            case 3:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[2] * qtdComprada;
+                break;
+            case 4:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[3] * qtdComprada;
+                break;
+            case 5:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[4] * qtdComprada;
+                break;
+            case 6:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[5] * qtdComprada;
+                break;
+            case 7:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[6] * qtdComprada;
+                break;
+            case 8:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[7] * qtdComprada;
+                break;
+            case 9:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[8] * qtdComprada;
+                break;
+            case 10:
+                printf("Quantos desse produto voce deseja comprar?\n: ");
+                scanf("%d", &qtdComprada);
+                totalDaCompra += precos[9] * qtdComprada;
+                break;
+        }
+    } while(produtoEscolhido != 0);
+
+    if(totalDaCompra >= 250 && totalDaCompra <= 500){
+        desconto = 0.9;
+        totalDaCompra = totalDaCompra * desconto;
+        printf("O valor total da sua compra, aplicando um desconto de 10%% foi: R$ %.2f", totalDaCompra);
+    } else if(totalDaCompra > 500  && totalDaCompra <= 1000){
+        desconto = 0.85;
+        totalDaCompra = totalDaCompra * desconto;
+        printf("O valor total da sua compra, aplicando um desconto de 15%% foi: R$ %.2f", totalDaCompra);
+    } else if(totalDaCompra > 1000){
+        desconto = 0.75;
+        totalDaCompra = totalDaCompra * desconto;
+        printf("O valor total da sua compra, aplicando um desconto de 25%% foi: R$ %.2f", totalDaCompra);
+    } else{
+        printf("O valor total da sua compra foi: R$ %.2f", totalDaCompra);
+    }
+}

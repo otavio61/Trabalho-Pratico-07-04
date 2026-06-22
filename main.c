@@ -26,6 +26,7 @@ int main(){
         printf("| 6 - Maior e menor                                  |\n");
         printf("| 7 - Fatorial                                       |\n");
         printf("| 8 - Fibonacci                                      |\n");
+        printf("| 9 - Lista de Compras                               |\n");
         printf("| 0 - Sair                                           |\n");
         printf("|----------------------------------------------------|\n");
         printf("\nDigite sua opcao: ");
@@ -63,6 +64,10 @@ int main(){
 
             case 8:
                 fibonacci();
+            break;
+
+            case 9:
+                listaCompra();
             break;
 
             case 0:

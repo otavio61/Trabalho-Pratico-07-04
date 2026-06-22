@@ -24,5 +24,6 @@ void somaZero();
 void maiorMenor();
 void fatorial();
 void fibonacci();
+void listaCompra();
 
 #endif
